@@ -1,0 +1,35 @@
+{{ block "articles" . }}
+    <a>Articles list:</a>
+    <table>
+        <thead>
+        <tr>
+            <td>Title</td>
+            <td>Created</td>
+            <td>Updated</td>
+            <td>Author</td>
+            <td>Published</td>
+        </tr>
+        </thead>
+        <tbody>
+        {{ range . }}
+            <tr>
+                <td>
+                    {{ .Title }}
+                </td>
+                <td>
+                    {{ .Created }}
+                </td>
+                <td>
+                    {{ .Updated }}
+                </td>
+                <td>
+                    {{ .Author }}
+                </td>
+                <td>
+                    {{ .Published }}
+                </td>
+            </tr>
+        {{ end }}
+        </tbody>
+    </table>
+{{ end }}

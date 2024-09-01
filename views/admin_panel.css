@@ -1,0 +1,63 @@
+.header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #b9e2ff;
+    position: fixed;
+    height: 50px;
+    overflow: auto;
+    text-align: left;
+    display: inline-block;
+}
+
+.header a {
+    font-size: 36px;
+    padding: 0 10px;
+    font-family: 'Comic Sans MS', serif;
+}
+
+/* The side navigation menu */
+.sidebar {
+    margin: 50px 0;
+    padding: 0;
+    width: 200px;
+    background-color: #b9e2ff;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+    background-color: #1d4d75;
+    color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+    background-color: #0972d9;
+    color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+    margin-left: 200px;
+    padding: 75px 16px;
+    height: 1000px;
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
