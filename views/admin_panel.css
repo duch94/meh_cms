@@ -61,3 +61,32 @@ div.content {
         float: none;
     }
 }
+
+/* Table */
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid darkgray;
+    padding: 8px;
+}
+
+thead th {
+    width: 25%;
+}
+
+thead td {
+    text-align: center;
+    vertical-align: middle;
+    background-color: #5e9cda;
+    color: white;
+}
+
+caption {
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: left;
+    color: #333;
+}

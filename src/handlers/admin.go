@@ -1,6 +1,8 @@
 package handlers
 
-import "github.com/labstack/echo/v4"
+import (
+	"github.com/labstack/echo/v4"
+)
 
 func AdminPanelView(c echo.Context) error {
 	err := c.Render(200, "admin_panel", nil)

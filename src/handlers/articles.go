@@ -6,12 +6,12 @@ import (
 )
 
 func ArticlesSubView(c echo.Context) error {
-	data, err := repo.GetArticles()
+	content, err := repo.GetArticles()
 	if err != nil {
 		return err
 	}
 
-	err = c.Render(200, "articles", data)
+	err = c.Render(200, "articles", content)
 	if err != nil {
 		return err
 	}

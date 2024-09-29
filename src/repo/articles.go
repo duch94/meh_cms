@@ -4,6 +4,7 @@ import "time"
 
 type Article struct {
 	Title     string
+	Topic     string
 	Content   string
 	Created   string
 	Updated   string
@@ -15,8 +16,10 @@ func GetArticles() ([]Article, error) {
 	articles := make([]Article, 0)
 	created := time.Now().AddDate(0, 0, 1)
 	updated := time.Now()
+	topic := GetTopic()
 	articles = append(articles, Article{
 		Title: "Why turtles live so long?",
+		Topic: topic.Name,
 		Content: `Turtles are known for their impressively long lifespans, and there are several factors that 
 contribute to this longevity:<\br> 
 1. Slow Metabolism<\br> 

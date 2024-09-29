@@ -1,9 +1,10 @@
 {{ block "articles" . }}
-    <a>Articles list:</a>
     <table>
+        <caption>Articles list:</caption>
         <thead>
         <tr>
             <td>Title</td>
+            <td>Topic</td>
             <td>Created</td>
             <td>Updated</td>
             <td>Author</td>
@@ -11,10 +12,13 @@
         </tr>
         </thead>
         <tbody>
-        {{ range . }}
+        {{ range .Content }}
             <tr>
                 <td>
                     {{ .Title }}
+                </td>
+                <td>
+                    {{ .Topic }}
                 </td>
                 <td>
                     {{ .Created }}
